@@ -1,6 +1,7 @@
 import "../styles/globals.scss"
 import type { AppProps } from "next/app"
 import Head from "next/head"
+import Merger from "../components/Merger"
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
@@ -13,7 +14,9 @@ export default function App({ Component, pageProps }: AppProps) {
 					href='/Logo.svg'
 				/>
 			</Head>
-			<Component {...pageProps} />
+			<Merger>
+				<Component {...pageProps} />
+			</Merger>
 		</>
 	)
 }
