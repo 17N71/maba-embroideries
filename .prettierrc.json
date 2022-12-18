@@ -1,8 +1,11 @@
 {
-  "arrowParens": "avoid",
-  "bracketSameLine": false,
-  "semi": true,
-  "useTabs": true,
-  "tabWidth": 2,
-  "bracketSpacing": true
+	"arrowParens": "always",
+	"editorconfig": true,
+	"printWidth": 80,
+	"bracketSameLine": false,
+	"semi": false,
+	"useTabs": true,
+	"jsxSingleQuote": true,
+	"tabWidth": 2,
+	"bracketSpacing": true
 }
