@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'National Book';
+    src: url('./test-national/National-BookItalic.woff2') format('woff2'),
+        url('./test-national/National-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-BoldItalic.woff2') format('woff2'),
+        url('./test-national/National-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-BlackItalic.woff2') format('woff2'),
+        url('./test-national/National-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National Book';
+    src: url('./test-national/National-Book.woff2') format('woff2'),
+        url('./test-national/National-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Bold.woff2') format('woff2'),
+        url('./test-national/National-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Black.woff2') format('woff2'),
+        url('./test-national/National-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National Regular';
+    src: url('./test-national/National-RegularItalic.woff2') format('woff2'),
+        url('./test-national/National-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Semibold.woff2') format('woff2'),
+        url('./test-national/National-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-ExtraboldItalic.woff2') format('woff2'),
+        url('./test-national/National-ExtraboldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Medium.woff2') format('woff2'),
+        url('./test-national/National-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-MediumItalic.woff2') format('woff2'),
+        url('./test-national/National-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-LightItalic.woff2') format('woff2'),
+        url('./test-national/National-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-SemiboldItalic.woff2') format('woff2'),
+        url('./test-national/National-SemiboldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Extrabold.woff2') format('woff2'),
+        url('./test-national/National-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Regular.woff2') format('woff2'),
+        url('./test-national/National-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Light.woff2') format('woff2'),
+        url('./test-national/National-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-ThinItalic.woff2') format('woff2'),
+        url('./test-national/National-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'National';
+    src: url('./test-national/National-Thin.woff2') format('woff2'),
+        url('./test-national/National-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

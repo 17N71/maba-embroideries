@@ -1,0 +1,24 @@
+{
+	"slides": [
+		{
+			"id": 1,
+			"alt": "Home slider image 1",
+			"src": "/HomeSliderIamges/slider1.jpg"
+		},
+		{
+			"id": 2,
+			"alt": "Home slider image 2",
+			"src": "/HomeSliderIamges/slider2.jpg"
+		},
+		{
+			"id": 3,
+			"alt": "Home slider image 3",
+			"src": "/HomeSliderIamges/slider3.jpg"
+		},
+		{
+			"id": 4,
+			"alt": "Home slider image 4",
+			"src": "/HomeSliderIamges/slider4.jpg"
+		}
+	]
+}

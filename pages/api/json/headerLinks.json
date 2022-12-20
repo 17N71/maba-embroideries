@@ -1,0 +1,39 @@
+{
+	"links": [
+		{
+			"id": 1,
+			"href": "",
+			"title": "Home"
+		},
+		{
+			"id": 2,
+			"href": "about",
+			"title": "About Us"
+		},
+		{
+			"id": 3,
+			"href": "artistry-and-gallery",
+			"title": "Artistry and Gallery"
+		},
+		{
+			"id": 4,
+			"href": "sustainability",
+			"title": "Sustainability"
+		},
+		{
+			"id": 5,
+			"href": "blog",
+			"title": "Blog"
+		},
+		{
+			"id": 6,
+			"href": "contact-us",
+			"title": "Contact Us"
+		},
+		{
+			"id": 7,
+			"href": "frequently-asked-questions",
+			"title": "FAQs"
+		}
+	]
+}

@@ -1,0 +1,6 @@
+.container {
+	@apply text-white flex gap-1 tracking-wider;
+	.button {
+		@apply uppercase;
+	}
+}

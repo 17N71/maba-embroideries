@@ -1,0 +1,28 @@
+.heading {
+	@apply font-normal capitalize tracking-wide;
+}
+.underscore {
+	@apply relative;
+	&::after {
+		content: "";
+		@apply absolute -bottom-1 left-0 w-[40%] h-1 bg-current;
+	}
+}
+.h1 {
+	@apply lg:text-7xl sm:text-6xl text-4xl;
+}
+.h2 {
+	@apply lg:text-6xl sm:text-5xl text-3xl;
+}
+.h3 {
+	@apply lg:text-5xl sm:text-4xl text-2xl;
+}
+.h4 {
+	@apply lg:text-4xl sm:text-3xl text-2xl;
+}
+.h5 {
+	@apply lg:text-4xl sm:text-2xl text-xl;
+}
+.h6 {
+	@apply lg:text-3xl sm:text-2xl text-xl;
+}

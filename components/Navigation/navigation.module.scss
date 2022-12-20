@@ -1,0 +1,20 @@
+.navigation {
+	@apply w-full flex justify-between px-7;
+}
+.list {
+	@apply flex mx-auto  max-w-3xl self-center justify-between items-center w-full list-none;
+}
+.item {
+	a {
+		@apply text-white relative;
+		&::after {
+			content: "";
+			@apply absolute -bottom-1 left-0 w-0 h-[2px] bg-white rounded transition-all duration-150 ease-out;
+		}
+	}
+	&.active {
+		a::after {
+			@apply w-full;
+		}
+	}
+}

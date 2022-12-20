@@ -1,0 +1,4 @@
+.button {
+	@apply px-[22px] py-2.5 border-[2px] border-white bg-black
+	 text-white capitalize lg:text-2xl text-lg transition-all hover:backdrop-blur-md hover:bg-opacity-90 hover:opacity-95  hover:bg-black/90 ease-out duration-200;
+}
