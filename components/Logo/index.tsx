@@ -6,7 +6,7 @@ const Logo = () => {
 	return (
 		<Link href={"/"}>
 			<Image
-				style={{ width: "auto", height: "auto" }}
+				style={{ width: "auto", height: "auto", minWidth: "200px" }}
 				src={"/Logo.svg"}
 				alt={"Logo"}
 				width={200}
