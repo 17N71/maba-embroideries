@@ -1,0 +1,6 @@
+.section {
+	@apply w-full self-center pb-16 pt-7 z-[1] relative mx-auto px-5 sm:px-16 md:px-24 lg:px-[132px] flex flex-col justify-center items-center gap-12;
+}
+.collections {
+	@apply grid lg:grid-cols-2 grid-cols-1 justify-items-center gap-14;
+}

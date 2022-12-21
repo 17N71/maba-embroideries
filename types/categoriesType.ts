@@ -1,6 +1,7 @@
 export interface HomeProps {
 	allCategories: AllCategory[]
 	allTestimonials: Testimonial[]
+	home: IHomeSlider[]
 }
 
 export interface AllCategory {
@@ -37,4 +38,26 @@ export interface Testimonial {
 	_id: string
 	authorName: string
 	comment: string
+}
+export interface IHomeSlider {
+	__typename: string
+	_id: string
+	page: string
+	slider: Slider
+}
+
+export interface Slider {
+	__typename: string
+	image: Image2
+	caption: string
+}
+
+export interface Image2 {
+	__typename: string
+	asset: Asset2
+}
+
+export interface Asset2 {
+	__typename: string
+	url: string
 }

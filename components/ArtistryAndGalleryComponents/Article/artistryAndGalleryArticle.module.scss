@@ -1,0 +1,9 @@
+.paragraph {
+	@apply lg:text-2xl md:text-xl text-lg leading-tight tracking-wide lg:max-w-[70%] w-full mt-7 md:text-left text-center;
+}
+.title {
+	@apply md:text-left text-center;
+}
+.blok {
+	@apply relative z-[1];
+}

@@ -6,8 +6,6 @@ const Navigation = (data: HeaderLinksType) => {
 	const router = useRouter()
 	const { pathname } = router
 	const path = pathname.slice(1)
-	console.log(data)
-
 	return (
 		<nav className={navigation.navigation}>
 			<ul className={navigation.list}>

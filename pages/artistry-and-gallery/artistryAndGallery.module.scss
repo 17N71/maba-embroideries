@@ -1,0 +1,21 @@
+.section {
+	@apply min-h-screen h-full w-full;
+}
+.content {
+	@apply min-h-screen  h-full relative z-[1] w-full flex flex-col
+	md:items-start items-center md:justify-end justify-center md:pl-32 md:px-0 px-4 pb-28
+	bg-cover bg-no-repeat bg-center;
+	&::after {
+		content: "";
+		background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.338542) 59.81%, rgba(0, 0, 0, 0) 89.31%);
+		opacity: 0.7;
+		@apply absolute top-0 left-0  w-full h-full;
+	}
+	&::before {
+		content: "";
+		background: linear-gradient(180deg, #000000 13.02%, rgba(0, 0, 0, 0) 100%);
+		transform: rotate(-180deg);
+		opacity: 0.7;
+		@apply absolute -bottom-[80%] left-0  w-full h-full;
+	}
+}

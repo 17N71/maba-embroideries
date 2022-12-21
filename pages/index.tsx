@@ -1,25 +1,21 @@
 import { GetStaticProps } from "next"
-import HomeSlider from "./../components/HomeSlider"
+import HomeSlider from "../components/HomeComponents/HomeSlider"
 import "@splidejs/react-splide/css"
-import useSWR from "swr"
-import HomeWelcome from "./../components/HomeWelcome/index"
+import HomeWelcome from "../components/HomeComponents/HomeWelcome"
 import { client } from "../apolloClient"
 import { gql } from "@apollo/client"
 import { HomeProps } from "./../types/categoriesType"
 import IHomeProps from "./../types/IHomeProps"
-import HomeOurPartners from "./../components/HomeOurPartners/index"
-import HomeBuildTogether from "./../components/HomeBuildTogether"
+import HomeOurPartners from "../components/HomeComponents/HomeOurPartners"
+import HomeBuildTogether from "../components/HomeComponents/HomeBuildTogether"
 
 const Home = ({ datas, loading }: IHomeProps): JSX.Element => {
-	const fetcher = (URL: string) => fetch(URL).then((res) => res.json())
-	const { data, isLoading } = useSWR("/api/homeHighSlider", fetcher)
-	const slides = data?.slides
-	if (loading || isLoading) {
+	if (loading) {
 		return <h2>Loading ...</h2>
 	}
 	return (
 		<>
-			<HomeSlider slides={slides} />
+			<HomeSlider slides={datas.home} />
 			<HomeWelcome categories={datas} />
 			<HomeOurPartners allTestimonials={datas.allTestimonials} />
 			<HomeBuildTogether />
@@ -52,6 +48,18 @@ export const getStaticProps: GetStaticProps = async () => {
 						_id
 						authorName
 						comment
+					}
+					home: allSlider(where: { page: { eq: "home" } }) {
+						_id
+						page
+						slider {
+							image {
+								asset {
+									url
+								}
+							}
+							caption
+						}
 					}
 				}
 			`,

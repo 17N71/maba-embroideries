@@ -1,0 +1,12 @@
+.section {
+	@apply mt-24;
+}
+.title {
+	@apply text-center  px-4;
+}
+.paragraph {
+	@apply text-lg font-medium leading-normal lg:px-60 md:px-32 sm:px-14 px-4 text-center mt-2;
+}
+.cardContainer {
+	@apply w-full max-w-[1110px] mx-auto px-2 mt-14 flex flex-col items-center justify-center;
+}

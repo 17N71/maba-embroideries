@@ -24,7 +24,6 @@ const FooterForm = () => {
 			url: "https://formbold.com/s/6vWB9",
 			data,
 		})
-		console.log(data)
 	}
 	return (
 		<div>

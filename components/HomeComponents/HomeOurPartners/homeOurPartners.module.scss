@@ -1,0 +1,23 @@
+.section {
+	background-image: url("/ourPartners.jpg");
+	@apply py-16 bg-cover bg-top bg-fixed mt-20 relative flex flex-col justify-center items-center w-full;
+	&::after {
+		content: "";
+		@apply bg-black bg-opacity-70 absolute w-full h-full top-0 left-0;
+	}
+	.content {
+		@apply relative z-[2] w-full;
+	}
+	.title {
+		@apply text-center px-2;
+	}
+	.paragraph {
+		@apply lg:text-xl text-base font-medium leading-relaxed max-w-[550px] mx-auto  w-full text-center lg:mt-9 mt-1;
+	}
+	.authorName {
+		@apply mt-10 text-center;
+	}
+	.splide {
+		@apply px-2;
+	}
+}
