@@ -14,7 +14,7 @@ const Header = () => {
 	}
 	useEffect(() => {
 		if (isOpen) {
-			window.document.documentElement.style.paddingRight = "12px"
+			window.document.documentElement.style.paddingRight = "0.5rem"
 			window.document.documentElement.style.overflow = "hidden"
 		} else {
 			window.document.documentElement.style.paddingRight = "0"
@@ -42,13 +42,7 @@ const Header = () => {
 				<Logo />
 			</h1>
 			<Media query={"(min-width: 1024px)"}>
-				{(matches) =>
-					matches ? (
-						<Navigation data={data} />
-					) : (
-						<MobileMenu isOpen={isOpen} data={data} />
-					)
-				}
+				{(matches) => (matches ? <Navigation data={data} /> : <MobileMenu isOpen={isOpen} data={data} />)}
 			</Media>
 		</header>
 	)

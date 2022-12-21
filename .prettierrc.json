@@ -1,7 +1,7 @@
 {
 	"arrowParens": "always",
 	"editorconfig": true,
-	"printWidth": 120,
+	"printWidth": 90,
 	"bracketSameLine": false,
 	"semi": false,
 	"useTabs": true,

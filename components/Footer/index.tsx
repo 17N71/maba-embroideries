@@ -21,7 +21,6 @@ const Footer = () => {
 										alt='Logo  Maba'
 										width={307}
 										height={72}
-										sizes={"307px, 72px"}
 									/>
 								</Link>
 							) : (
@@ -31,7 +30,7 @@ const Footer = () => {
 										alt='Logo  Maba'
 										width={256}
 										height={60}
-										sizes={"256px, 60px"}
+									
 									/>
 								</Link>
 							)
@@ -40,9 +39,7 @@ const Footer = () => {
 				</div>
 				<div className={footer.right}>
 					<Socials direction='column' className={footer.socials} />
-					<strong className={footer.rights}>
-						© {new Date().getFullYear()} Aadidev Trade International
-					</strong>
+					<strong className={footer.rights}>© {new Date().getFullYear()} Aadidev Trade International</strong>
 				</div>
 			</section>
 		</FooterLayout>

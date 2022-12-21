@@ -1,0 +1,6 @@
+.gallery {
+	@apply grid lg:grid-cols-2 grid-cols-1 gap-4 mt-14;
+}
+.image {
+	@apply w-full h-full object-center object-cover;
+}

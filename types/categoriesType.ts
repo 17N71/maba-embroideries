@@ -9,7 +9,15 @@ export interface AllCategory {
 	_id: string
 	title: string
 	description: string
-	category_slug: CategorySlug
+	slug: CategorySlug
+	categoryImage: CategoryImage
+}
+export interface ProductPageCategories {
+	__typename: string
+	_id: string
+	title: string
+	description: string
+	slug: CategorySlug
 	categoryImage: CategoryImage
 }
 

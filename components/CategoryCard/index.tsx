@@ -3,13 +3,7 @@ import categoryCard from "./categoryCard.module.scss"
 import Title from "./../Title/index"
 import Image from "next/image"
 import Button from "./../Button/index"
-const CategoryCard = ({
-	_id,
-	categoryImage,
-	category_slug,
-	description,
-	title,
-}: AllCategory) => {
+const CategoryCard = ({ _id, categoryImage, slug, description, title }: AllCategory) => {
 	return (
 		<div className={categoryCard.card}>
 			<div className={categoryCard.info}>
@@ -21,7 +15,7 @@ const CategoryCard = ({
 					type={"button"}
 					isLink={true}
 					className={categoryCard.link}
-					href={category_slug.current}
+					href={slug.current}
 				>
 					View
 				</Button>

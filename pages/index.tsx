@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
 						_id
 						title
 						description
-						category_slug {
+						slug {
 							current
 						}
 						categoryImage {

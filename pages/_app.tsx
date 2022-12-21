@@ -1,4 +1,5 @@
 import "../styles/globals.scss"
+import "react-medium-image-zoom/dist/styles.css"
 import type { AppProps } from "next/app"
 import Head from "next/head"
 import Merger from "../components/Merger"
@@ -11,12 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>Maba Embroideries</title>
-				<link
-					rel='shortcut icon'
-					sizes='all'
-					type='image/svg+xml'
-					href='/Logo.svg'
-				/>
+				<link rel='shortcut icon' sizes='all' type='image/svg+xml' href='/Logo.svg' />
 			</Head>
 			<AnimatePresence mode='wait'>
 				<motion.div
