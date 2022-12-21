@@ -1,0 +1,14 @@
+.navigation {
+	@apply fixed top-0 -left-[150%] w-full h-full bg-black 
+	transition-all duration-200 ease-out
+	flex justify-center items-center z-20;
+	&.open {
+		@apply left-0;
+	}
+}
+.list {
+	@apply flex flex-col gap-3;
+}
+.item {
+	@apply text-3xl;
+}

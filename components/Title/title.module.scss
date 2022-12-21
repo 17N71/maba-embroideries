@@ -17,8 +17,14 @@
 .h3 {
 	@apply lg:text-5xl sm:text-4xl text-2xl;
 }
-.h4 {
+.ash4 {
 	@apply lg:text-4xl sm:text-3xl text-2xl;
+}
+.ash6 {
+	@apply lg:text-3xl sm:text-2xl text-xl;
+}
+.h4 {
+	@apply lg:text-3xl text-2xl;
 }
 .h5 {
 	@apply lg:text-4xl sm:text-2xl text-xl;

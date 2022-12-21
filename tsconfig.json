@@ -24,7 +24,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		"apolloClient.jsx",
-		"client.js"
+		"client.js",
+		"hooks/useInput.js"
 	],
 	"exclude": [
 		"node_modules"

@@ -1,8 +1,11 @@
 .sliderContainer {
-	@apply after:w-full after:h-full after:bg-black/50 after:opacity-40 z-50 after:bg-opacity-10 after:absolute after:top-0 after:left-0;
+	@apply after:w-full after:h-full flex justify-center items-center after:bg-black/50 after:opacity-40 z-50 after:bg-opacity-10 after:absolute after:top-0 after:left-0;
 }
 .blok {
-	@apply w-full h-full flex justify-center md:items-start items-center  max-w-[85%] mx-auto relative z-10 flex-col gap-5;
+	@apply w-full h-full flex justify-center md:items-start items-center  max-w-[85%] mx-auto absolute z-10 flex-col gap-5;
+}
+.image {
+	@apply absolute top-0 left-0 w-full h-full object-cover object-center;
 }
 .paragraph {
 	@apply text-2xl text-white md:text-left text-center;

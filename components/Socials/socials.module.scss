@@ -1,0 +1,29 @@
+.column {
+	.refs {
+		@apply flex flex-col  md:justify-start justify-center md:items-start items-center md:text-left text-center;
+		> * {
+			@apply cursor-pointer;
+		}
+	}
+	address {
+		@apply not-italic;
+	}
+	.socials {
+		@apply flex md:justify-start justify-center items-center md:text-left text-center gap-6 mt-4;
+		> * {
+			@apply cursor-pointer;
+		}
+	}
+}
+.row {
+	@apply flex my-5;
+	.refs {
+		@apply flex flex-col gap-5;
+		li {
+			@apply flex gap-4;
+			& > a {
+				@apply cursor-pointer;
+			}
+		}
+	}
+}

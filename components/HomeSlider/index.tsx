@@ -24,21 +24,19 @@ const HomeSlider = ({ slides }: homeHightSlider) => {
 		},
 	}
 	return (
-		<div className={`home-slider`}>
-			<Splide options={options}>
+		<section className={`home-slider`}>
+			<Splide options={options} className={homeSlider.container}>
 				{slides &&
 					slides?.map((slide) => (
 						<SplideSlide key={slide.id} className={homeSlider.sliderContainer}>
-							<div>
-								<Image
-									objectFit='cover'
-									objectPosition='center'
-									src={slide.src}
-									alt={slide.alt}
-									priority={true}
-									fill={true}
-								/>
-							</div>
+							<Image
+								className={homeSlider.image}
+								src={slide.src}
+								alt={slide.alt}
+								priority={true}
+								fill={true}
+								sizes={"100vw"}
+							/>
 							<div className={homeSlider.blok}>
 								<Title variant='h2' className={homeSlider.title}>
 									Everything You Can
@@ -52,7 +50,7 @@ const HomeSlider = ({ slides }: homeHightSlider) => {
 						</SplideSlide>
 					))}
 			</Splide>
-		</div>
+		</section>
 	)
 }
 

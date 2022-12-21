@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					href='/Logo.svg'
 				/>
 			</Head>
-			<AnimatePresence exitBeforeEnter>
+			<AnimatePresence mode='wait'>
 				<motion.div
 					key={pathname}
 					initial='initialState'

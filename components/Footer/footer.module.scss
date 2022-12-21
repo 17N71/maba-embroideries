@@ -1,0 +1,34 @@
+.footerJaguarLeft {
+	background-image: url("/footerJaguar.jpg");
+	@apply bg-contain  min-h-[400px] bg-no-repeat bg-black bg-center   pb-4 relative;
+	&::after {
+		content: "";
+		@apply absolute top-0 left-0 w-full h-full bg-black/40;
+	}
+}
+.footerJaguarRight {
+	background-image: url("/footerJaguarRight.jpg");
+	@apply bg-cover gap-3 min-h-[400px] bg-no-repeat bg-center pb-4  relative;
+	&::after {
+		content: "";
+		@apply absolute top-0 left-0 w-full h-full bg-black/70;
+	}
+}
+.stayInTouch {
+	@apply flex md:flex-row flex-col  md:justify-between justify-center items-center relative z-[1] lg:px-32 md:px-14 pt-11;
+}
+.stayInTouch .left {
+	@apply flex flex-col;
+}
+.logo {
+	@apply mt-12 max-w-[307px];
+}
+.right {
+	@apply flex flex-col md:items-start items-center;
+}
+.rights {
+	@apply font-medium md:text-left text-center text-lg leading-normal tracking-wide;
+}
+.socials {
+	@apply md:mb-5 my-5 md:text-left text-center;
+}

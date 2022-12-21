@@ -8,10 +8,19 @@
 *::after,
 *::before {
 	font-family: "National", sans-serif;
-	@apply text-lg font-normal;
+	@apply text-lg font-normal antialiased;
+}
+html {
+	@apply scroll-smooth;
 }
 body {
 	@apply bg-black text-white;
+}
+::-webkit-scrollbar {
+	@apply w-3 bg-black;
+}
+::-webkit-scrollbar-thumb {
+	@apply bg-white;
 }
 h1,
 h2,
@@ -75,6 +84,30 @@ div#__next {
 		height: 3px !important;
 		border-radius: 5px !important;
 		background-color: #ffffff22 !important;
+		&.is-active {
+			background-color: white !important;
+		}
+	}
+}
+.testimonials {
+	.splide.is-active {
+		padding: 0 !important;
+	}
+	.splide__pagination {
+		display: flex !important;
+		gap: 5px;
+		outline: none !important;
+		justify-content: center !important;
+		align-items: center !important;
+		align-self: center !important;
+		bottom: -2rem;
+	}
+	.splide__pagination__page {
+		width: 28px !important	;
+		outline: none !important;
+		height: 3px !important;
+		border-radius: 5px !important;
+		background-color: #ffffff44 !important;
 		&.is-active {
 			background-color: white !important;
 		}

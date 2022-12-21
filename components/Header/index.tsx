@@ -4,17 +4,51 @@ import Navigation from "./../Navigation"
 import useSWR from "swr"
 import Media from "react-media"
 import MobileMenu from "../MobileMenu"
+import { GiHamburgerMenu } from "react-icons/gi"
+import { useEffect, useState } from "react"
 const Header = () => {
 	const fetcher = (URL: string) => fetch(URL).then((res) => res.json())
+	const [isOpen, setIsOpen] = useState<boolean>(false)
+	const menuHandle = () => {
+		setIsOpen(!isOpen)
+	}
+	useEffect(() => {
+		if (isOpen) {
+			window.document.documentElement.style.paddingRight = "12px"
+			window.document.documentElement.style.overflow = "hidden"
+		} else {
+			window.document.documentElement.style.paddingRight = "0"
+			window.document.documentElement.style.overflow = "auto"
+		}
+	}, [isOpen])
 	const { data, isLoading } = useSWR("/api/headerLinks", fetcher)
 	if (isLoading) {
 		return <h2>Loading ...</h2>
 	}
 	return (
 		<header className={header.header}>
-			<Logo />
 			<Media query={"(min-width: 1024px)"}>
-				{(matches) => (matches ? <Navigation data={data} /> : <MobileMenu />)}
+				{(matches) =>
+					matches ? (
+						""
+					) : (
+						<button className={header.menuButton} onClick={menuHandle}>
+							<GiHamburgerMenu size={24} title='Menu button' />
+						</button>
+					)
+				}
+			</Media>
+			<h1>
+				<Logo />
+			</h1>
+			<Media query={"(min-width: 1024px)"}>
+				{(matches) =>
+					matches ? (
+						<Navigation data={data} />
+					) : (
+						<MobileMenu isOpen={isOpen} data={data} />
+					)
+				}
 			</Media>
 		</header>
 	)

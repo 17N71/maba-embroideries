@@ -1,0 +1,24 @@
+.card {
+	@apply flex items-center sm:justify-center justify-start w-full lg:h-[508px] h-auto lg:flex-row flex-col-reverse;
+	&:nth-child(2n) {
+		@apply lg:flex-row-reverse;
+	}
+}
+.info {
+	@apply sm:w-[508px] sm:h-[508px] w-auto h-auto flex items-center justify-center flex-col md:px-16 sm:px-8 p-4  text-center;
+}
+.title {
+	@apply sm:mt-0 mt-4;
+}
+.paragraph {
+	@apply mt-4 sm:px-2 md:px-0 px-3;
+}
+.imageBlok {
+	@apply relative  sm:w-[508px] sm:h-[508px] w-[210px] h-[210px];
+}
+.image {
+	@apply object-cover object-center w-full h-full;
+}
+.link {
+	@apply py-1 mt-7 hover:bg-white hover:text-black flex justify-center items-center duration-200 ease-in-out;
+}

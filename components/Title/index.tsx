@@ -82,6 +82,30 @@ const Title = ({
 					{children}
 				</h6>
 			)
+		case "ash6":
+			return (
+				<h2
+					className={`${title.heading} ${underscore ? title.underscore : ""} ${
+						title.h6
+					} ${title.ash6} ${className}`}
+					style={{ color: color ? color : "" }}
+					{...props}
+				>
+					{children}
+				</h2>
+			)
+		case "ash4":
+			return (
+				<h3
+					className={`${title.heading} ${underscore ? title.underscore : ""} ${
+						title.ash4
+					} ${className}`}
+					style={{ color: color ? color : "" }}
+					{...props}
+				>
+					{children}
+				</h3>
+			)
 		default:
 			return (
 				<h2

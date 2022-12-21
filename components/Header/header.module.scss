@@ -2,3 +2,6 @@
 	background: linear-gradient(180deg, #000000 0%, rgba(26, 25, 24, 0) 100%);
 	@apply absolute top-0 left-0 w-full h-[160px]  flex justify-center items-center flex-col gap-5 z-10;
 }
+.menuButton {
+	@apply fixed top-[70px] left-5 z-50 bg-black p-1;
+}
