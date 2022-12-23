@@ -1,5 +1,5 @@
 .gallery {
-	@apply grid lg:grid-cols-2 grid-cols-1 gap-4 mt-14;
+	@apply grid lg:grid-cols-2 grid-cols-1 gap-4 mt-14 max-w-[1110px] mx-auto;
 }
 .image {
 	@apply w-full h-full object-center object-cover;

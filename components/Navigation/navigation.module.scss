@@ -9,7 +9,7 @@
 		@apply text-white relative;
 		&::after {
 			content: "";
-			@apply absolute -bottom-1 left-0 w-0 h-[2px] bg-white rounded transition-all duration-150 ease-out;
+			@apply absolute -bottom-1.5 left-0 w-0 h-[2px] bg-white rounded transition-all duration-150 ease-out;
 		}
 	}
 	&.active {

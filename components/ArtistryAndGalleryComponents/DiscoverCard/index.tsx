@@ -6,7 +6,7 @@ const DiscoverCard = ({ title, slug: slugs, postImageSchema }: AllDiscover) => {
 	const slug = slugs.current
 	return (
 		<div className={discoverCard.card}>
-			<Link href={slug}>
+			<Link href={`/categories/${slug}`}>
 				<Image
 					src={postImageSchema.image.asset.url}
 					alt={postImageSchema.caption}
@@ -18,7 +18,7 @@ const DiscoverCard = ({ title, slug: slugs, postImageSchema }: AllDiscover) => {
 				/>
 			</Link>
 			<h3>
-				<Link href={slug} className={discoverCard.title}>
+				<Link href={`/categories/${slug}`} className={discoverCard.title}>
 					{title}
 				</Link>
 			</h3>

@@ -1,0 +1,12 @@
+.blogSlug {
+	@apply min-h-screen w-full flex flex-col mt-[160px] md:pt-10   justify-start items-center lg:px-32 md:px-20 sm:px-16  px-4 gap-7;
+}
+.imageContainer {
+	@apply w-full h-full relative flex flex-col gap-2 justify-start items-start;
+}
+.image {
+	@apply w-full h-full object-cover  md:min-w-[550px] md:min-h-[420px] min-w-[220px] min-h-[120px]  max-w-[750px] max-h-[600px] border border-white;
+}
+.goBack {
+	@apply flex gap-1 items-center sm:py-2 py-1 sm:px-2 px-1.5 hover:bg-white hover:text-black;
+}

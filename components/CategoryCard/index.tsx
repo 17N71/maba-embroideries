@@ -15,7 +15,7 @@ const CategoryCard = ({ _id, categoryImage, slug, description, title }: AllCateg
 					type={"button"}
 					isLink={true}
 					className={categoryCard.link}
-					href={slug.current}
+					href={`/categories/${slug.current}`}
 				>
 					View
 				</Button>

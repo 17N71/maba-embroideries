@@ -1,0 +1,33 @@
+.memoirCard {
+	@apply lg:mr-14 last:mr-0 flex flex-col gap-3;
+}
+.ImgContainer {
+	@apply w-full h-full rounded-md;
+}
+.image {
+	@apply object-cover w-full h-full max-w-[420px] max-h-[300px] rounded-md;
+}
+.authorImage {
+	@apply border border-white w-[26px] h-[26px] rounded-full object-fill p-[1px];
+}
+.date {
+	@apply flex gap-7 text-white text-opacity-50 font-medium leading-snug;
+	span {
+		@apply text-sm;
+	}
+}
+.author {
+	@apply flex gap-4 items-center;
+	span {
+		@apply text-white text-opacity-50 text-sm;
+	}
+}
+.title {
+	@apply text-xl;
+}
+.paragraph {
+	@apply text-sm;
+}
+.dot {
+	@apply relative after:absolute after:-right-4 after:rounded-full after:top-[50%] after:transform after:translate-y-[-50%] after:w-1.5 after:h-1.5 after:bg-white after:bg-opacity-50;
+}

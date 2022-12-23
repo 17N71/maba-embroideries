@@ -1,5 +1,4 @@
 import "../styles/globals.scss"
-import "react-medium-image-zoom/dist/styles.css"
 import type { AppProps } from "next/app"
 import Head from "next/head"
 import Merger from "../components/Merger"

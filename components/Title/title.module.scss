@@ -1,11 +1,11 @@
 .heading {
-	@apply font-normal capitalize tracking-wide;
+	@apply font-normal capitalize tracking-wide relative;
 }
 .underscore {
 	@apply relative;
 	&::after {
 		content: "";
-		@apply absolute -bottom-1 left-0 w-[40%] h-1 bg-current;
+		@apply absolute -bottom-[27px] left-0 w-[40%] h-1 bg-current;
 	}
 }
 .h1 {

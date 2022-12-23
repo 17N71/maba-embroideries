@@ -1,0 +1,9 @@
+.blogMemoir {
+	@apply p-4 w-full flex-col items-center justify-center;
+}
+.title {
+	@apply text-center;
+}
+.container {
+	@apply grid  mt-12 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1  lg:place-items-start place-content-center place-items-center lg:px-32 md:px-20 sm:px-16 px-4;
+}

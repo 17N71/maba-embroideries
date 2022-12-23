@@ -1,0 +1,29 @@
+.moreInfo {
+	@apply flex items-start justify-start h-full flex-col;
+}
+.article {
+	@apply flex flex-col gap-5;
+}
+.title {
+	@apply lg:text-5xl sm:text-4xl text-2xl;
+}
+.paragraph {
+	@apply text-base;
+}
+.author {
+	@apply mt-8 flex items-center gap-2;
+	&:hover {
+		span {
+			@apply underline;
+		}
+	}
+	img {
+		@apply object-cover object-center w-full h-full  max-h-[50px] max-w-[50px];
+	}
+}
+.authorAndDate {
+	@apply flex sm:flex-row flex-col gap-2 sm:justify-between justify-center items-center w-full;
+	.date {
+		@apply flex sm:self-end self-center;
+	}
+}

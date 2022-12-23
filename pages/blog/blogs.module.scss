@@ -1,0 +1,7 @@
+.content {
+	background-image: url("/blogs.png");
+	@apply min-h-screen pt-36 w-full  h-full  flex flex-col md:items-start md:justify-end justify-center items-center relative after:transform after:-rotate-180 after:bg-opacity-70 after:absolute after:w-full after:h-full;
+	&::after {
+		background: linear-gradient(180deg, #000000 13.02%, rgba(26, 25, 24, 0) 100%);
+	}
+}
