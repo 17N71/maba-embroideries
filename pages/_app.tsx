@@ -1,5 +1,6 @@
 import "../styles/globals.scss"
 import type { AppProps } from "next/app"
+import "@splidejs/react-splide/css"
 import Head from "next/head"
 import Merger from "../components/Merger"
 import { AnimatePresence, motion } from "framer-motion"

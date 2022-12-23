@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next"
 import HomeSlider from "../components/HomeComponents/HomeSlider"
-import "@splidejs/react-splide/css"
 import HomeWelcome from "../components/HomeComponents/HomeWelcome"
 import { client } from "../apolloClient"
 import { gql } from "@apollo/client"
