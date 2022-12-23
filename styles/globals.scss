@@ -1,6 +1,6 @@
 @import "./stylesheet.css";
 @import "./Tiempos/stylesheet.css";
-@import "./Poppins/stylesheet.scss";
+@import "./Poppins/stylesheet.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,7 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Tiempos Headline", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-family: "Tiempos Headline", Impact, Haettenschweiler, "Arial Narrow Bold",
+		sans-serif;
 }
 div#__next {
 	@apply flex flex-col justify-between min-h-screen;
