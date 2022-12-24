@@ -1,18 +1,18 @@
-import { MouseEvent, useEffect, useRef, useState } from "react"
-function useZoom(ModalZoomRef: any) {
+import { MouseEvent, MutableRefObject, useEffect, useState } from "react"
+function useZoom(ModalZoomRef: MutableRefObject<HTMLImageElement>) {
 	const [isZoom, setIsZoom] = useState<boolean>(false)
 	const [zoomSize, setZoomSize] = useState<number>(1)
 	function closeZoom() {
 		setIsZoom(false)
 	}
-	const toStop = (e: MouseEvent<HTMLDivElement, MouseEvent>) => 	e.stopPropagation()
-	
+	const toStop = (e: MouseEvent) => e.stopPropagation()
+
 	const zoomHandle = () => setIsZoom(true)
 	function zoomIn() {
-		setZoomSize((state) => state + 0.1)
+		setZoomSize((state) => state + 0.07)
 	}
 	function zoomOut() {
-		setZoomSize((state) => state - 0.1)
+		setZoomSize((state) => state - 0.07)
 	}
 	useEffect(() => {
 		if (isZoom) {
@@ -47,6 +47,10 @@ function useZoom(ModalZoomRef: any) {
 		}
 		return () => window.removeEventListener("keydown", closeOnKey)
 	}, [isZoom])
-	return { isZoom, toStop, zoomHandle }
+	function callZoom(e: MouseEvent) {
+		e.stopPropagation()
+		zoomHandle()
+	}
+	return { isZoom, callZoom, toStop, zoomHandle }
 }
 export default useZoom
