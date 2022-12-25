@@ -5,9 +5,10 @@ import { client } from "./../../apolloClient"
 import { gql } from "@apollo/client"
 import { IAboutProps } from "./../../types/AboutTypes"
 import AboutSlider from "./../../components/AboutComponents/AboutSlider"
+import Loader from "../../components/Loader"
 const About: NextPage<IAboutProps> = ({ data, loading }) => {
 	if (loading) {
-		return <h2>loading ...</h2>
+		return <Loader />
 	}
 	const { allAbout } = data
 	return (

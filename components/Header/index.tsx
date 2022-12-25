@@ -6,6 +6,7 @@ import Media from "react-media"
 import MobileMenu from "../MobileMenu"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { useEffect, useState } from "react"
+import Loader from "../Loader"
 const Header = () => {
 	const fetcher = (URL: string) => fetch(URL).then((res) => res.json())
 	const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -23,7 +24,7 @@ const Header = () => {
 	}, [isOpen])
 	const { data, isLoading } = useSWR("/api/headerLinks", fetcher)
 	if (isLoading) {
-		return <h2>Loading ...</h2>
+		return <Loader />
 	}
 	return (
 		<header className={header.header}>
@@ -42,7 +43,13 @@ const Header = () => {
 				<Logo />
 			</h1>
 			<Media query={"(min-width: 1024px)"}>
-				{(matches) => (matches ? <Navigation data={data} /> : <MobileMenu isOpen={isOpen} data={data} />)}
+				{(matches) =>
+					matches ? (
+						<Navigation data={data} />
+					) : (
+						<MobileMenu isOpen={isOpen} data={data} />
+					)
+				}
 			</Media>
 		</header>
 	)

@@ -5,6 +5,7 @@ import { GetStaticProps } from "next"
 import { client } from "./../../apolloClient"
 import { gql } from "@apollo/client"
 import { IMemoirProps } from "./../../types/blogTypes"
+import Loader from "../../components/Loader"
 export const getStaticProps: GetStaticProps = async () => {
 	try {
 		const { data, loading, error } = await client.query<IMemoirProps>({
@@ -66,6 +67,9 @@ export const getStaticProps: GetStaticProps = async () => {
 	}
 }
 const Blogs = ({ allMemories, loading }: IMemoirProps): JSX.Element => {
+	if (loading) {
+		return <Loader />
+	}
 	return (
 		<section className={blogs.section}>
 			<div className={blogs.content}>

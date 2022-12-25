@@ -7,15 +7,16 @@ import { ProductPageCategories } from "../../../types/categoriesType"
 import { PostPageProps } from "../../../types/PostPageType"
 import postPage from "./postPage.module.scss"
 import PostPageGallery from "../../../components/PostPageComponents/PostPageGallery/index"
+import Loader from "../../../components/Loader"
 export type ProductPageType = {
 	allDiscovers: IArtistryAndGalleryProps
 	allCategory: ProductPageCategories[]
 }
 interface IPostPageProps {
 	data: PostPageProps
+	loading: boolean
 }
 export const getStaticPaths: GetStaticPaths = async () => {
-
 	const { data } = await client.query<ProductPageType>({
 		query: gql`
 			query getSlugs {
@@ -27,7 +28,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 				allCategory {
 					slug {
 						current
-
 					}
 				}
 			}
@@ -45,8 +45,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	}
 }
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }: any) => {
-	const { data } = await client.query({
-		query: gql`
+	try {
+		const { data, loading, error } = await client.query({
+			query: gql`
 			query getSlugs {
 				allDiscovers: allDiscover(
 					where: { slug: { current: { eq: "${slug}" } } }
@@ -66,16 +67,30 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }: any) 
 				}
 			}
 		`,
-	})
-	return {
-		props: {
-			data,
-		},
-		revalidate: 30,
+		})
+		if (error) {
+			return {
+				notFound: true,
+			}
+		}
+		return {
+			props: {
+				data,
+				loading,
+			},
+			revalidate: 30,
+		}
+	} catch {
+		return {
+			notFound: true,
+		}
 	}
 }
 
-const PostPage: NextPage<IPostPageProps> = ({ data }) => {
+const PostPage: NextPage<IPostPageProps> = ({ data, loading }) => {
+	if (loading) {
+		return <Loader />
+	}
 	const title = (data && data?.allDiscovers[0]?.title) || ""
 	return (
 		<div className={postPage.wrapper}>

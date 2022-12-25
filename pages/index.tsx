@@ -7,10 +7,11 @@ import { HomeProps } from "./../types/categoriesType"
 import IHomeProps from "./../types/IHomeProps"
 import HomeOurPartners from "../components/HomeComponents/HomeOurPartners"
 import HomeBuildTogether from "../components/HomeComponents/HomeBuildTogether"
+import Loader from "../components/Loader"
 
 const Home = ({ datas, loading }: IHomeProps): JSX.Element => {
 	if (loading) {
-		return <h2>Loading ...</h2>
+		return <Loader />
 	}
 	return (
 		<>

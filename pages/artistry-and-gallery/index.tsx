@@ -6,6 +6,7 @@ import { client } from "../../apolloClient"
 import { gql, useQuery } from "@apollo/client"
 import { IArtistryAndGalleryProps } from "./../../types/artistryAndGalleryType"
 import { useEffect, useState } from "react"
+import Loader from "../../components/Loader"
 
 export type IArtistryAndGalleryPageProps = {
 	data: IArtistryAndGalleryProps
@@ -35,21 +36,30 @@ const ArtistryAndGallery = ({ data, loading }: IArtistryAndGalleryPageProps) => 
 		}
 	`)
 	const loadMore = async () => {
-		setDataCollection({ allDiscovers: [...dataCollection.allDiscovers, ...moreData.allDiscovers] })
+		setDataCollection({
+			allDiscovers: [...dataCollection.allDiscovers, ...moreData.allDiscovers],
+		})
 		setIsLoadMore(true)
 	}
 	useEffect(() => {
 		setDataCollection(data)
 	}, [])
 	if (loading) {
-		return <h2>Loading ...</h2>
+		return <Loader />
 	}
 	return (
 		<div className={artistryAndGallery.section}>
-			<section className={artistryAndGallery.content} style={{ backgroundImage: `url('/artistryAndGallery.jpg')` }}>
+			<section
+				className={artistryAndGallery.content}
+				style={{ backgroundImage: `url('/artistryAndGallery.jpg')` }}
+			>
 				<ArtistryAndGalleryArticle />
 			</section>
-			<ArtistryAndGalleryDiscoverCollection isLoadMore={isLoadMore} loadMore={loadMore} data={dataCollection} />
+			<ArtistryAndGalleryDiscoverCollection
+				isLoadMore={isLoadMore}
+				loadMore={loadMore}
+				data={dataCollection}
+			/>
 		</div>
 	)
 }
