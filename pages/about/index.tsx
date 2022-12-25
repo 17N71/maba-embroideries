@@ -1,17 +1,17 @@
-import { NextPage } from "next"
 import about from "./about.module.scss"
+import { NextPage } from "next"
 import { GetStaticProps } from "next"
 import { client } from "./../../apolloClient"
 import { gql } from "@apollo/client"
 import { IAboutProps } from "./../../types/AboutTypes"
-import AboutSlider from "./../../components/AboutComponents/AboutSlider/index"
+import AboutSlider from "./../../components/AboutComponents/AboutSlider"
 const About: NextPage<IAboutProps> = ({ data, loading }) => {
 	if (loading) {
 		return <h2>loading ...</h2>
 	}
 	const { allAbout } = data
 	return (
-		<section className={about.section}>
+		<section className={about.section} id={"about"}>
 			<AboutSlider slides={allAbout} />
 		</section>
 	)

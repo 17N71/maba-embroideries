@@ -1,10 +1,11 @@
-import "@splidejs/react-splide/css/sea-green"
+import aboutSlider from "./aboutSlider.module.scss"
 import { SplideSlide, Splide } from "@splidejs/react-splide"
 import Image from "next/image"
 import Media from "react-media"
 import { IAllAbout } from "../../../types/AboutTypes"
 import Title from "../../Title"
-import aboutSlider from "./aboutSlider.module.scss"
+import "@splidejs/react-splide/css/sea-green"
+
 const AboutSlider = ({ slides }: { slides: IAllAbout[] }) => {
 	return (
 		<>
