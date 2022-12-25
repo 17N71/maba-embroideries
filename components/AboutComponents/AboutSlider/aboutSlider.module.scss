@@ -1,0 +1,32 @@
+.slide {
+	@apply relative z-30;
+}
+.card {
+	@apply w-full  h-full flex flex-col sm:justify-center justify-end sm:pb-0 pb-5 items-start
+ after:absolute after:w-full after:h-full after:z-30;
+
+	&::after {
+		content: "";
+		background: linear-gradient(
+			90deg,
+			#000000 0%,
+			rgba(0, 0, 0, 0.338542) 59.81%,
+			rgba(0, 0, 0, 0) 89.31%
+		);
+	}
+}
+.image {
+	@apply object-cover object-bottom w-auto h-auto;
+}
+.article {
+	@apply relative pt-20 z-40 lg:pl-[132px] md:px-24 sm:px-8 px-4 flex flex-col md:items-start items-center md:text-left text-center md:pr-0 pr-10 sm:justify-center justify-end;
+}
+.title {
+	@apply lg:text-5xl sm:text-4xl text-2xl  after:w-[48px] after:h-[3px];
+}
+.paragraph {
+	@apply 2xl:w-1/2 xl:w-[60%] lg:w-[90%] md:w-[90%]  mt-14 md:leading-normal  md:tracking-wide tracking-normal	lg:text-xl md:text-lg text-base;
+}
+.readMore {
+	@apply mt-4 hover:bg-white hover:text-black;
+}

@@ -11,6 +11,7 @@
 		"@apollo/client": "^3.7.2",
 		"@babel/preset-env": "^7.20.2",
 		"@next/font": "13.0.7",
+		"@sanity/block-content-to-react": "^3.0.0",
 		"@splidejs/react-splide": "^0.7.12",
 		"@types/node": "18.11.17",
 		"@types/react": "18.0.26",
