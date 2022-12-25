@@ -15,7 +15,7 @@ const MobileMenu = ({ data, isOpen }: mobileMenuType) => {
 				<ul className={mobileMenu.list}>
 					{data?.links?.map((link) => (
 						<li key={link.id} className={mobileMenu.item}>
-							<Link href={link.href}>{link.title}</Link>
+							<Link href={`/${link.href}`}>{link.title}</Link>
 						</li>
 					))}
 				</ul>

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import navigation from "./navigation.module.scss"
 import { useRouter } from "next/router"
-import LanguageButton from "./../LanguageButton/index"
+import LanguageButton from "./../LanguageButton"
 const Navigation = (data: HeaderLinksType) => {
 	const router = useRouter()
 	const { pathname } = router
@@ -18,7 +18,7 @@ const Navigation = (data: HeaderLinksType) => {
 									path === link.href ? navigation.active : ""
 								}`}
 							>
-								<Link href={`/${link.href}` || "/"} tabIndex={i as number}>
+								<Link href={`/${link.href}`} tabIndex={i as number}>
 									{link.title}
 								</Link>
 							</li>
