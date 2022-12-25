@@ -1,5 +1,5 @@
 .article {
-	@apply pb-[148px] flex gap-10 flex-col relative z-10 md:pl-32 md:px-0 px-4;
+	@apply pb-[148px] flex gap-10 flex-col relative z-[9] md:pl-32 md:px-0 px-4;
 }
 .title {
 	@apply md:after:w-[50px] after:invisible lg:after:visible mb-8 lg:text-left text-center;
