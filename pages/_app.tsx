@@ -5,6 +5,8 @@ import Head from "next/head"
 import Merger from "../components/Merger"
 import { AnimatePresence, motion } from "framer-motion"
 import { useRouter } from "next/router"
+import { Analytics } from "@vercel/analytics/react"
+
 export default function App({ Component, pageProps }: AppProps) {
 	const { pathname } = useRouter()
 
@@ -39,6 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				>
 					<Merger>
 						<Component {...pageProps} />
+						<Analytics />
 					</Merger>
 				</motion.div>
 			</AnimatePresence>
