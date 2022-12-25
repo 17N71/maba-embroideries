@@ -8,15 +8,6 @@ export const client = new ApolloClient({
 		Authorization: `Bearer ${process.env.NEXT_PUBLIC_ACCESS_TOKEN}`,
 	},
 })
-export const serializers = {
-	types: {
-		code: (props: any) => (
-			<pre data-language={props.node.language}>
-				<code>{props.node.code}</code>
-			</pre>
-		),
-	},
-}
 const ApolloConecter = ({ children }: DefaultType) => {
 	return <ApolloProvider client={client}>{children}</ApolloProvider>
 }
