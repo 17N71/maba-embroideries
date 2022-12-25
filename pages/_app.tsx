@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					initial='initialState'
 					animate='animateState'
 					exit='exitState'
-					transition={{ duration: 0.30 }}
+					transition={{ duration: 0.7 }}
 					variants={{
 						initialState: {
 							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
