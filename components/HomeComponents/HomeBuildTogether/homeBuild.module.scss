@@ -8,7 +8,7 @@
 	@apply w-full flex md:items-start items-center flex-col lg:px-24 md:px-8 sm:px-8 px-4 pb-24 pt-16;
 }
 .container {
-	@apply flex justify-between w-full mt-16;
+	@apply flex justify-between w-full mt-16 gap-4;
 }
 .title {
 	@apply text-center  tracking-wider;

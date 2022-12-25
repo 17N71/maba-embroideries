@@ -8,7 +8,7 @@ const Zoom = ({ children, theme = "dark" }: ZoomType) => {
 		return <span>Image is not found</span>
 	}
 
-	const ModalZoomRef = useRef<MutableRefObject<HTMLImageElement> | any>(null)
+	const ModalZoomRef = useRef<any>(null)
 	const { isZoom, callZoom } = useZoom(ModalZoomRef)
 	return (
 		<Media query={"(min-width: 768px)"}>

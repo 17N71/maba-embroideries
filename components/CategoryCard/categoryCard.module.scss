@@ -17,7 +17,7 @@
 	@apply relative  sm:w-[508px] sm:h-[508px] w-[210px] h-[210px];
 }
 .image {
-	@apply object-cover object-center w-full h-full;
+	@apply object-cover object-center w-full h-full max-w-[508px] max-h-[508px];
 }
 .link {
 	@apply py-1 mt-7 hover:bg-white hover:text-black flex justify-center items-center duration-200 ease-in-out;

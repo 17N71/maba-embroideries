@@ -2,10 +2,13 @@
 	@apply gap-8 flex flex-col items-center justify-center;
 }
 .image {
-	@apply w-full h-full max-w-[480px] max-h-[320px] object-cover;
+	@apply w-full h-full max-w-[479px] max-h-[320px] absolute object-cover;
 }
 .title {
 	font-family: "Tiempos Headline", Impact, Haettenschweiler, "Arial Narrow Bold",
 		sans-serif;
 	@apply text-xl leading-tight tracking-wide text-center;
+}
+.imageContainer {
+	@apply block relative;
 }

@@ -1,7 +1,7 @@
 import footer from "./footer.module.scss"
 import FooterLayout from "./FooterLayout"
 import FooterForm from "./../FooterForm"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import Link from "next/link"
 import Socials from "./../Socials/index"
 import Media from "react-media"
@@ -17,8 +17,10 @@ const Footer = () => {
 							matches ? (
 								<Link href={"/"} className={footer.logo}>
 									<Image
-										src={"/footerLogo.svg"}
+										src={"/	footerLogo.svg"}
 										alt='Logo  Maba'
+										title='Logo  Maba'
+										layout={"intrinsic"}
 										width={307}
 										height={72}
 									/>
@@ -30,7 +32,6 @@ const Footer = () => {
 										alt='Logo  Maba'
 										width={256}
 										height={60}
-									
 									/>
 								</Link>
 							)
@@ -39,7 +40,9 @@ const Footer = () => {
 				</div>
 				<div className={footer.right}>
 					<Socials direction='column' className={footer.socials} />
-					<strong className={footer.rights}>© {new Date().getFullYear()} Aadidev Trade International</strong>
+					<strong className={footer.rights}>
+						© {new Date().getFullYear()} Aadidev Trade International
+					</strong>
 				</div>
 			</section>
 		</FooterLayout>

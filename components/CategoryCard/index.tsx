@@ -1,7 +1,7 @@
 import { AllCategory } from "../../types/categoriesType"
 import categoryCard from "./categoryCard.module.scss"
 import Title from "./../Title"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import Button from "./../Button"
 import Zoom from "../Zoom"
 const CategoryCard = ({ _id, categoryImage, slug, description, title }: AllCategory) => {
@@ -16,23 +16,22 @@ const CategoryCard = ({ _id, categoryImage, slug, description, title }: AllCateg
 					type={"button"}
 					isLink={true}
 					className={categoryCard.link}
-					href={`/categories/${slug.current}`}
+					href={`categories/${slug.current}`}
 				>
 					View
 				</Button>
-
 			</div>
 			<div className={categoryCard.imageBlok}>
-			<Zoom theme={"dark"}>
-				<Image
-					src={categoryImage.image.asset.url}
-					alt={categoryImage.caption}
-					fill={true}
-					sizes='(min-width: 550px) 508px,
-							 (max-width: 550px) 210px
-				'
-					className={categoryCard.image}
-				/>
+				<Zoom theme={"dark"}>
+					<Image
+						src={categoryImage.image.asset.url}
+						width={508}
+						height={508}
+						objectFit={"cover"}
+						alt={categoryImage.caption}
+						layout={"intrinsic"}
+						className={categoryCard.image}
+					/>
 				</Zoom>
 			</div>
 		</div>
