@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>Maba Embroideries</title>
-				<link rel='shortcut icon' sizes='all' type='image/svg+xml' href='/Logo.svg' />
+				<link rel='icon' sizes='all' type='image/svg+xml' href='/Logo.svg' />
 			</Head>
 			<AnimatePresence mode='wait'>
 				<motion.div
@@ -20,14 +20,13 @@ export default function App({ Component, pageProps }: AppProps) {
 					initial='initialState'
 					animate='animateState'
 					exit='exitState'
-					transition={{ duration: 0.7 }}
+					transition={{ duration: 0.1 }}
 					variants={{
 						initialState: {
 							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 							opacity: 0,
 							visibility: "hidden",
 						},
-
 						animateState: {
 							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 							opacity: 1,
