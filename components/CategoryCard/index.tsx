@@ -1,8 +1,9 @@
 import { AllCategory } from "../../types/categoriesType"
 import categoryCard from "./categoryCard.module.scss"
-import Title from "./../Title/index"
+import Title from "./../Title"
 import Image from "next/image"
-import Button from "./../Button/index"
+import Button from "./../Button"
+import Zoom from "../Zoom"
 const CategoryCard = ({ _id, categoryImage, slug, description, title }: AllCategory) => {
 	return (
 		<div className={categoryCard.card}>
@@ -19,8 +20,10 @@ const CategoryCard = ({ _id, categoryImage, slug, description, title }: AllCateg
 				>
 					View
 				</Button>
+
 			</div>
 			<div className={categoryCard.imageBlok}>
+			<Zoom theme={"dark"}>
 				<Image
 					src={categoryImage.image.asset.url}
 					alt={categoryImage.caption}
@@ -30,6 +33,7 @@ const CategoryCard = ({ _id, categoryImage, slug, description, title }: AllCateg
 				'
 					className={categoryCard.image}
 				/>
+				</Zoom>
 			</div>
 		</div>
 	)

@@ -27,11 +27,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 				allCategory {
 					slug {
 						current
+
 					}
 				}
 			}
 		`,
 	})
+
 	const allSlugs = [...data.allCategory, ...data.allCategory]
 	const paths = allSlugs.map((s) => ({ params: { slug: s.slug.current.toString() } }))
 	const uniqueArray = paths.filter(function (item, pos) {
