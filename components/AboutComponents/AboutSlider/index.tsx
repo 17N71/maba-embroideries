@@ -1,47 +1,13 @@
-import { SplideSlide, Splide } from "@splidejs/react-splide"
 import "@splidejs/react-splide/css/sea-green"
+import { SplideSlide, Splide } from "@splidejs/react-splide"
 import Image from "next/image"
 import Media from "react-media"
 import { IAllAbout } from "../../../types/AboutTypes"
 import Title from "../../Title"
 import aboutSlider from "./aboutSlider.module.scss"
-import Head from "next/head"
 const AboutSlider = ({ slides }: { slides: IAllAbout[] }) => {
 	return (
 		<>
-			<Head>
-				<style global>{`
-					.splide {
-						padding: 0 !important;
-					}
-					.splide__pagination {
-						left: auto;
-						display: flex;
-						gap: 8px;
-					}
-					.splide__track.splide__track--slide.splide__track--ttb.splide__track--draggable {
-						height: 100vh !important;
-					}
-					.splide__pagination--ttb .splide__pagination__page {
-						background: #ffffff;
-						opacity: 0.2;
-						height: 28px;
-						width: 3px;
-						outline: none;
-					}
-					.splide__pagination__page.is-active {
-						width: 3px;
-						outline: none;
-						height: 28px;
-						background: #ffffff;
-						opacity: 1 !important;
-					}
-					.splide.is-focus-in .splide__pagination__page:focus {
-						outline: none;
-						outline-offset: 0;
-					}
-				`}</style>
-			</Head>
 			<Splide
 				className={aboutSlider.splide}
 				options={{
