@@ -1,9 +1,8 @@
-import "../styles/globals.scss"
 import type { AppProps } from "next/app"
-import "@splidejs/react-splide/css"
-import Head from "next/head"
-import Merger from "../components/Merger"
 import { AnimatePresence, motion } from "framer-motion"
+import "../styles/globals.scss"
+import Merger from "../components/Merger"
+import Head from "next/head"
 import { useRouter } from "next/router"
 import { Analytics } from "@vercel/analytics/react"
 
@@ -16,23 +15,23 @@ export default function App({ Component, pageProps }: AppProps) {
 				<title>Maba Embroideries</title>
 				<link rel='icon' sizes='all' type='image/svg+xml' href='/Logo.svg' />
 			</Head>
-			<AnimatePresence mode='wait'>
+			<AnimatePresence mode='sync'>
 				<motion.div
 					key={pathname}
 					initial='initialState'
 					animate='animateState'
 					exit='exitState'
-					transition={{ duration: 0.1 }}
+					transition={{ duration: 0.4 }}
 					variants={{
 						initialState: {
-							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 							opacity: 0,
 							visibility: "hidden",
+							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 						},
 						animateState: {
-							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 							opacity: 1,
 							visibility: "visible",
+							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 						},
 						exitState: {
 							clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
