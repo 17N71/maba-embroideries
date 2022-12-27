@@ -4,7 +4,6 @@ import Image from "next/image"
 import Media from "react-media"
 import { IAllAbout } from "../../../types/AboutTypes"
 import Title from "../../Title"
-import "@splidejs/react-splide/css/sea-green"
 
 const AboutSlider = ({ slides }: { slides: IAllAbout[] }) => {
 	return (

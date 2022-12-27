@@ -2,7 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide"
 import Image from "next/image"
 import homeSlider from "./homeSlider.module.scss"
 import Title from "../../Title"
-import Button from "../../Button/index"
+import Button from "../../Button"
 import { IHomeSlider } from "../../../types/categoriesType"
 const HomeSlider = ({ slides }: { slides: IHomeSlider[] }) => {
 	const options = {
@@ -12,8 +12,8 @@ const HomeSlider = ({ slides }: { slides: IHomeSlider[] }) => {
 		padding: 0,
 		gap: 0,
 		cover: true,
-		// autoplay: true,
-		// interval: 4000,
+		autoplay: true,
+		interval: 4000,
 		classes: {
 			arrows: `splide__arrows maba-slider-arrows`,
 			arrow: `splide__arrow maba-slider-arrow`,
