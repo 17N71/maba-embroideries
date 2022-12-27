@@ -8,7 +8,7 @@ import Title from "../../Title"
 const AboutSlider = ({ slides }: { slides: IAllAbout[] }) => {
 	return (
 		<>
-			<Splide
+			{/* <Splide
 				className={aboutSlider.splide}
 				options={{
 					direction: "ttb",
@@ -60,7 +60,12 @@ const AboutSlider = ({ slides }: { slides: IAllAbout[] }) => {
 							</div>
 						</SplideSlide>
 					))}
-			</Splide>
+			</Splide> */}
+			<article className={"min-h-screen flex justify-start pl-24 items-center"}>
+				<Title variant='h2' underscore={true} className={aboutSlider.title}>
+					{"it's title"}
+				</Title>
+			</article>
 		</>
 	)
 }
