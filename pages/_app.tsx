@@ -12,8 +12,38 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	return (
 		<>
+			<Head>
+				<title>Maba Embroideries</title>
+				<link rel='icon' sizes='all' type='image/svg+xml' href='/Logo.svg' />
+			</Head>
+
 			<Merger>
-				<Component {...pageProps} />
+				<AnimatePresence mode='wait'>
+					<motion.div
+						key={pathname}
+						initial='initialState'
+						animate='animateState'
+						exit='exitState'
+						transition={{ duration: 0.45 }}
+						variants={{
+							initialState: {
+								opacity: 0,
+								visibility: "hidden",
+								clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+							},
+							animateState: {
+								opacity: 1,
+								visibility: "visible",
+								clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+							},
+							exitState: {
+								clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+							},
+						}}
+					>
+						<Component {...pageProps} />
+					</motion.div>
+				</AnimatePresence>
 				<Analytics />
 			</Merger>
 		</>
