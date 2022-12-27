@@ -15,10 +15,10 @@ const BuildTogetherForm = () => {
 	const emailId = useId()
 	const firstNameId = useId()
 	const messageId = useId()
-	const [email, changeEmail] = useInput("")
-	const [name, changeName] = useInput("")
-	const [firstName, changeFirstName] = useInput("")
-	const [textArea, changeTextArea] = useInput("")
+	const { value: email, changeState: changeEmail } = useInput("")
+	const { value: name, changeState: changeName } = useInput("")
+	const { value: firstName, changeState: changeFirstName } = useInput("")
+	const { value: textArea, changeState: changeTextArea } = useInput("")
 	const {
 		register,
 		handleSubmit,
@@ -31,14 +31,10 @@ const BuildTogetherForm = () => {
 			data,
 		})
 	}
-	const pattern =
-		/^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/g
+	const pattern = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/g
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={buildForm.form}>
-			<label
-				htmlFor={nameId}
-				className={`${buildForm.field} ${buildForm.name}`}
-			>
+			<label htmlFor={nameId} className={`${buildForm.field} ${buildForm.name}`}>
 				<span className={buildForm.alt}>Name</span>
 				<input
 					required={true}
@@ -50,10 +46,7 @@ const BuildTogetherForm = () => {
 					onChange={changeName}
 				/>
 			</label>
-			<label
-				htmlFor={emailId}
-				className={`${buildForm.field} ${buildForm.email}`}
-			>
+			<label htmlFor={emailId} className={`${buildForm.field} ${buildForm.email}`}>
 				<span className={buildForm.alt}>Email</span>
 				<input
 					className={errors.Email ? buildForm.requried : ""}
@@ -83,10 +76,7 @@ const BuildTogetherForm = () => {
 					placeholder={"Aadidev Trade Organisation"}
 				/>
 			</label>
-			<label
-				htmlFor={messageId}
-				className={`${buildForm.field} ${buildForm.message}`}
-			>
+			<label htmlFor={messageId} className={`${buildForm.field} ${buildForm.message}`}>
 				<div className={buildForm.messageAlt}>
 					<span className={buildForm.alt}>How may we help you?</span>
 					<span className={buildForm.alt}>{textArea.length}/ 180</span>
