@@ -24,25 +24,28 @@ const Merger = ({ children }: MergerType) => {
 	return (
 		<ApolloConecter>
 			<Header />
-			<AnimatePresence initial={false} mode={"wait"}>
+			<AnimatePresence initial={false} mode={"popLayout"}>
 				<motion.main
 					key={router.route}
-					transition={{ duration: 0.45 }}
+					transition={{ duration: 0.5 }}
 					initial={"initialState"}
 					animate={"animateState"}
 					exit={"exitState"}
 					variants={{
 						initialState: {
-							visibility: "hidden",
-							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+							y: -25,
+							x: -5,
+							opacity: 0,
 						},
 						animateState: {
-							visibility: "visible",
-							clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)",
+							y: 0,
+							x: 0,
+							opacity: 1,
 						},
 						exitState: {
-							visibility: "hidden",
-							clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+							y: 15,
+							x:5,
+							opacity: 0,
 						},
 					}}
 				>
