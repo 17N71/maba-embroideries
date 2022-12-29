@@ -8,9 +8,9 @@ import { useRouter } from "next/router"
 const Merger = ({ children }: MergerType) => {
 	const router = useRouter()
 	const variants = {
-		initialState: { opacity: 0, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
-		animateState: { opacity: 1, clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)" },
-		exitState: { opacity: 0, clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" },
+		initialState: { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
+		animateState: { clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)" },
+		exitState: { clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" },
 	}
 	return (
 		<ApolloConecter>
