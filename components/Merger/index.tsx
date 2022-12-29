@@ -33,18 +33,15 @@ const Merger = ({ children }: MergerType) => {
 					exit={"exitState"}
 					variants={{
 						initialState: {
-							y: -25,
-							x: -5,
+							y: -15,
 							opacity: 0,
 						},
 						animateState: {
 							y: 0,
-							x: 0,
 							opacity: 1,
 						},
 						exitState: {
 							y: 15,
-							x:5,
 							opacity: 0,
 						},
 					}}
