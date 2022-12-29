@@ -27,18 +27,14 @@ const FrequentlyAskedQuestions = ({ data, loading }: IFAQsProps) => {
 			}
 		}
 	`)
-	if (isLoading || loading) {
-		return <Loader />
-	}
+
 	if (error) {
 		router.replace("/error")
 	}
 	return (
 		<section className={frequentlyAskedQuestions.section}>
 			<AnimateSharedLayout>
-				<motion.div
-					className={frequentlyAskedQuestions.content}
-				>
+				<motion.div className={frequentlyAskedQuestions.content}>
 					<h2 className={frequentlyAskedQuestions.title}>Frequently Asked Questions</h2>
 					<AnimatePresence>
 						<ul className={frequentlyAskedQuestions.headingList}>
