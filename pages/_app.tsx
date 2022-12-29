@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	const r = useRouter()
 	return (
 		<Merger>
-			<AnimatePresence mode={"wait"}>
+			<AnimatePresence mode={"sync"} initial={false}>
 				<motion.div
 					key={r.route}
 					animate={"pageAnimate"}
