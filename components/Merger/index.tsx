@@ -22,35 +22,35 @@ const Merger = ({ children }: MergerType) => {
 		},
 	}
 	return (
-		<ApolloConecter>
-			<Header />
-			<AnimatePresence initial={false} mode={"wait"} exitBeforeEnter={true}>
-				<motion.main
-					key={router.route + "_" + Math.random()}
-					transition={{ duration: 0.5 }}
-					initial={"initialState"}
-					animate={"animateState"}
-					exit={"exitState"}
-					variants={{
-						initialState: {
-							y: -15,
-							opacity: 0,
-						},
-						animateState: {
-							y: 0,
-							opacity: 1,
-						},
-						exitState: {
-							y: 15,
-							opacity: 0,
-						},
-					}}
-				>
+		<AnimatePresence initial={false} mode={"wait"} exitBeforeEnter={true}>
+			<motion.main
+				key={router.route + "_" + Math.random()}
+				transition={{ duration: 0.5 }}
+				initial={"initialState"}
+				animate={"animateState"}
+				exit={"exitState"}
+				variants={{
+					initialState: {
+						y: -15,
+						opacity: 0,
+					},
+					animateState: {
+						y: 0,
+						opacity: 1,
+					},
+					exitState: {
+						y: 15,
+						opacity: 0,
+					},
+				}}
+			>
+				<ApolloConecter>
+					<Header />
 					{children}
-				</motion.main>
-			</AnimatePresence>
-			<Footer />
-		</ApolloConecter>
+					<Footer />
+				</ApolloConecter>
+			</motion.main>
+		</AnimatePresence>
 	)
 }
 
