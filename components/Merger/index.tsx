@@ -24,9 +24,9 @@ const Merger = ({ children }: MergerType) => {
 	return (
 		<ApolloConecter>
 			<Header />
-			<AnimatePresence initial={false} mode={"popLayout"}>
+			<AnimatePresence initial={false} mode={"wait"} exitBeforeEnter={true}>
 				<motion.main
-					key={router.route}
+					key={router.route + "_" + Math.random()}
 					transition={{ duration: 0.5 }}
 					initial={"initialState"}
 					animate={"animateState"}
