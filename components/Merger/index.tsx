@@ -8,9 +8,18 @@ import { useRouter } from "next/router"
 const Merger = ({ children }: MergerType) => {
 	const router = useRouter()
 	const variants = {
-		initialState: { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
-		animateState: { clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)" },
-		exitState: { clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" },
+		initialState: {
+			visibility: "hidden",
+			clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+		},
+		animateState: {
+			visibility: "visible",
+			clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)",
+		},
+		exitState: {
+			visibility: "hidden",
+			clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+		},
 	}
 	return (
 		<ApolloConecter>
@@ -22,7 +31,20 @@ const Merger = ({ children }: MergerType) => {
 					initial={"initialState"}
 					animate={"animateState"}
 					exit={"exitState"}
-					variants={variants}
+					variants={{
+						initialState: {
+							visibility: "hidden",
+							clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+						},
+						animateState: {
+							visibility: "visible",
+							clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0% 100%)",
+						},
+						exitState: {
+							visibility: "hidden",
+							clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+						},
+					}}
 				>
 					{children}
 				</motion.main>
