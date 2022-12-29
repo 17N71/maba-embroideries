@@ -1,18 +1,17 @@
-import Button from "../Button"
+import Button from "../../Button"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { useState, useId } from "react"
 import form from "./form.module.scss"
 import axios from "axios"
 import { BsArrowRight } from "react-icons/bs"
-import Title from "./../Title/index"
+import Title from "../../Title/index"
 type Inputs = {
 	email: string
 }
 const FooterForm = () => {
 	const [email, setEmial] = useState<string>("")
 	const emailId = useId()
-	const pattern =
-		/^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/g
+	const pattern = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/g
 	const {
 		register,
 		handleSubmit,

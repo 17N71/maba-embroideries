@@ -1,9 +1,9 @@
 import footer from "./footer.module.scss"
 import FooterLayout from "./FooterLayout"
-import FooterForm from "./../FooterForm"
+import FooterForm from "./FooterForm"
 import Image from "next/legacy/image"
 import Link from "next/link"
-import Socials from "./../Socials/index"
+import Socials from "./../Socials"
 import Media from "react-media"
 
 const Footer = () => {
@@ -30,6 +30,8 @@ const Footer = () => {
 									<Image
 										src={"/footerLogo.svg"}
 										alt='Logo  Maba'
+										title='Logo  Maba'
+										layout={"intrinsic"}
 										width={256}
 										height={60}
 									/>

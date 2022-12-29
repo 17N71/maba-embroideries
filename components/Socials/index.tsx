@@ -91,22 +91,38 @@ const Socials = ({ direction = "row", className }: SocialsType) => {
 				<div className={`${socials.row} ${className}`}>
 					<ul className={socials.refs}>
 						<li>
-							<a>
-								<BsWhatsapp size={24} title='Whatsapp' color={"	#ffffff"} />
+							<a href={"tel:+37441351030"} rel='noopener noreferrer' target='_blank'>
+								<BsFillTelephoneFill size={24} title='Telephone' color={"	#ffffff"} />
 							</a>
-							<a>+91 90 6699 7777</a>
+							<a href={"tel:+37441351030"} rel='noopener noreferrer' target='_blank'>
+								+374-(0)-41-35-10-30
+							</a>
 						</li>
 						<li>
-							<a>
+							<a
+								href={"https://www.instagram.com/_.1771._/"}
+								rel='noopener noreferrer'
+								target='_blank'
+							>
 								<BsInstagram size={24} title='Instagram' color={"#ffffff"} />
 							</a>
-							<a>mabaembroideries</a>
+							<a href={"https://www.instagram.com/_.1771._/"}>_.1771._</a>
 						</li>
 						<li>
-							<a>
+							<a
+								href={"mailto:narek07012020@gmail.com"}
+								rel='noopener noreferrer'
+								target='_blank'
+							>
 								<SiGmail size={24} title='Gmail' color={"#ffffff"} />
 							</a>
-							<a>info@maba.com</a>
+							<a
+								href={"mailto:narek07012020@gmail.com"}
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								narek07012020@gmail.com
+							</a>
 						</li>
 					</ul>
 				</div>
