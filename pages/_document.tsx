@@ -3,7 +3,6 @@ export default function Document() {
 	return (
 		<Html lang='en'>
 			<Head>
-				<title>Maba Embroideries</title>
 				<link rel='icon' sizes='all' type='image/svg+xml' href='/Logo.svg' />
 			</Head>
 			<body>

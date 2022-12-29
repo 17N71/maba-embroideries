@@ -8,8 +8,8 @@ export const client = new ApolloClient({
 		Authorization: `Bearer ${process.env.NEXT_PUBLIC_ACCESS_TOKEN}`,
 	},
 })
-const ApolloConecter = ({ children }: DefaultType) => {
+const ApolloConnecter = ({ children }: DefaultType) => {
 	return <ApolloProvider client={client}>{children}</ApolloProvider>
 }
 
-export default ApolloConecter
+export default ApolloConnecter

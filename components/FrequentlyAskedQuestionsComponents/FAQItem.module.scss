@@ -1,0 +1,18 @@
+.line {
+	@apply absolute w-full h-[2px] bg-white -bottom-6 left-0;
+}
+.item {
+	@apply relative;
+}
+.body {
+	@apply mt-4;
+}
+.heading {
+	@apply font-medium flex w-full justify-between;
+}
+.opened {
+	@apply transform transition-transform duration-300 ease-out rotate-90;
+}
+.chevron {
+	@apply transition-transform duration-300 ease-out;
+}

@@ -1,0 +1,24 @@
+.section {
+	background-image: url("/FrequentlyAskedQuestions.png");
+	@apply pt-[159px] min-h-screen w-full bg-cover 
+	 bg-center relative
+	  after:bg-black after:bg-opacity-80 after:absolute after:top-0 after:left-0 after:w-full after:h-full;
+}
+.content {
+	@apply flex relative z-[1] lg:px-[132px] md:px-28 sm:px-16 px-8 mt-11 flex-col  pb-[80px] h-full;
+}
+.title {
+	@apply lg:text-5xl md:text-left text-center sm:text-4xl text-2xl;
+}
+.headingList {
+	@apply flex lg:flex-row flex-col  gap-8 mt-3 items-center;
+}
+.active {
+	@apply relative;
+}
+.line {
+	@apply absolute -bottom-1 left-0 w-full h-[2px] bg-white rounded-full;
+}
+.body {
+	@apply mt-6 flex flex-col gap-11 max-w-[900px];
+}
