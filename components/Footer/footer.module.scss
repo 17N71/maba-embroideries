@@ -1,6 +1,6 @@
 .footerJaguarLeft {
 	background-image: url("/footerJaguar.jpg");
-	@apply bg-contain  min-h-[400px] bg-no-repeat bg-black bg-center -z-[10]   pb-4 relative;
+	@apply bg-contain  min-h-[400px] bg-no-repeat bg-black bg-center z-[12]   pb-4 relative;
 	&::after {
 		content: "";
 		@apply absolute top-0 left-0 w-full h-full bg-black/40;

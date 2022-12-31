@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { MutableRefObject, ReactElement, useRef } from "react"
+import { ReactElement, useRef } from "react"
+import { AnimateSharedLayout, motion } from "framer-motion"
 import zoom from "./zoom.module.scss"
 import useZoom from "./../../hooks/useZoom"
 import Media from "react-media"
@@ -14,9 +15,14 @@ const Zoom = ({ children, theme = "dark" }: ZoomType) => {
 		<Media query={"(min-width: 768px)"}>
 			{(matches) =>
 				matches ? (
-					<>
+					<AnimateSharedLayout>
 						{isZoom && (
-							<div
+							<motion.div
+								initial={{ opacity: 0, y: -40 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: 40 }}
+								transition={{ duration: 0.2 }}
+								layoutId={`ContainerImageC-${Math.random()}`}
 								className={`${isZoom ? zoom.zoomIn : ""} ${
 									theme === "dark"
 										? zoom.dark
@@ -25,7 +31,14 @@ const Zoom = ({ children, theme = "dark" }: ZoomType) => {
 										: zoom.dark
 								}`}
 							>
-								<div className={zoom.imageContainer}>
+								<motion.div
+									className={zoom.imageContainer}
+									layoutId={`ContainerImage-${Math.random()}`}
+									initial={{ opacity: 0, y: -40 }}
+									animate={{ opacity: 1, y: 0 }}
+									exit={{ opacity: 0, y: 40 }}
+									transition={{ duration: 0.2 }}
+								>
 									<Image
 										width={700}
 										ref={ModalZoomRef}
@@ -33,16 +46,24 @@ const Zoom = ({ children, theme = "dark" }: ZoomType) => {
 										className={zoom.image}
 										src={children.props.src}
 										priority={true}
-										quality={"100"}
+										quality={100}
 										alt={children.props.alt}
 									/>
-								</div>
-							</div>
+								</motion.div>
+							</motion.div>
 						)}
-						<div className={zoom.zoomInCursor} onClick={callZoom}>
+						<motion.div
+							initial={{ opacity: 0, y: -40 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: 40 }}
+							transition={{ duration: 0.2 }}
+							className={zoom.zoomInCursor}
+							onClick={callZoom}
+							layoutId={`afterImage-${Math.random()}`}
+						>
 							{children}
-						</div>
-					</>
+						</motion.div>
+					</AnimateSharedLayout>
 				) : (
 					<>{children}</>
 				)
