@@ -47,7 +47,7 @@ const Header = () => {
 					matches ? (
 						<Navigation data={data} />
 					) : (
-						<MobileMenu isOpen={isOpen} data={data} />
+						<MobileMenu setIsOpen={setIsOpen} isOpen={isOpen} data={data} />
 					)
 				}
 			</Media>
